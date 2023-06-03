@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta=charset="UTF-8"; content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="alemamesse.css">
+<title>revive</title>
+</head>
+<body style="background-color: #E7F5CC;">
+<div class="baner">
+
+
+<body onLoad="initClock()">
+
+  <div id="timedate">
+    <a id="mon">January</a>
+    <a id="d">1</a>,
+    <a id="y">0</a><br />
+    <a id="h">12</a> :
+    <a id="m">00</a>:
+    <a id="s">00</a>
+    
+  </div>
+
+<img src="revive.jpg" style="max-width:10%; heigh: auto; onejct-fit:contain;">
+</div>
+
+<div class="menulewo">
+<a href="homepage.html" class="aktualna">Główna<img src="home.png" style="float:left;margin-left:40px;margin-top:-30px;max-width:70px; heigh: auto;"</a>
+<a href="recykling.html">Recykling<img src="trash.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="jakdziala.html">Jak działa?<img src="question.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="onas.html">O nas</a>
+</div>
+
+<div class="topnav">
+  <input type="text" placeholder="Search..">
+</div> 
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    
+    <img src="smiec.jpg" style="width:82%; margin-top: -5px;">
+    <div class="text"><b>Rocznie na świecie powstają
+ ponad 2 miliardy ton odpadów!</b></div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="recykling.jpg" style="width:82%;  margin-top: -5px;">
+    <div class="text">I'm Happy</div>
+  </div>
+ <div class="mySlides fade">
+    
+    <img src="a.jpg" style="width:82%;  margin-top: -5px;">
+    <div class="text">How are you?</div>
+  </div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+  }
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+  }
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+
+Number.prototype.pad = function(n) {
+  for (var r = this.toString(); r.length < n; r = 0 + r);
+  return r;
+};
+
+function updateClock() {
+  var now = new Date();
+  var 
+    sec = now.getSeconds(),
+    min = now.getMinutes(),
+    hou = now.getHours(),
+    mo = now.getMonth(),
+    dy = now.getDate(),
+    yr = now.getFullYear();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var tags = ["mon", "d", "y", "h", "m", "s", ],
+    corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2),]
+  for (var i = 0; i < tags.length; i++)
+    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+}
+
+function initClock() {
+  updateClock();
+  window.setInterval("updateClock()", 1);
+}
+
+</script>
+
+<div class="stopka">&copy; revive </div>
+</body>
+</html>
