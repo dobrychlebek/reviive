@@ -263,13 +263,12 @@ body {
 	
 .calosc {
 	margin-top:30px;
-	padding: 1%;
+	padding: 1% 10px;
 	float: left;
 	background-color: rgb(210 225 210);
 	width: 80%;
 	display: block;
 	position: relative;
-	border-bottom: 100px;
 	margin-bottom: 20px;
 	}
 .many {
