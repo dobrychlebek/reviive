@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+<meta=charset="UTF-8"; content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="alemamesse.css">
+<title>revive</title>
+</head>
+<body style="background-color: #E7F5CC;">
+<div class="baner">
+
+
+<body onLoad="initClock()">
+
+  <div id="timedate">
+    <a id="mon">January</a>
+    <a id="d">1</a>,
+    <a id="y">0</a><br />
+    <a id="h">12</a> :
+    <a id="m">00</a>:
+    <a id="s">00</a>
+    
+  </div>
+
+<img src="revive.jpg" style="max-width:10%; heigh: auto; onejct-fit:contain;">
+</div>
+
+<div class="menulewo">
+<a href="homepage.html" >Główna<img src="home.png" style="float:left;margin-left:40px;margin-top:-30px;max-width:70px; heigh: auto;"</a>
+<a href="recykling.html">Recykling<img src="trash.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="jakdziala.html">Jak działa?<img src="question.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="onas.html" class="aktualna">O nas</a>
+</div>
+
+<div class="topnav">
+  <input type="text" placeholder="Search..">
+</div> 
+
+
+<div class="content">
+		<div class="pudlo">
+			<img src="dwa" style="margin: 2%; width:30%;" >
+			<div class="my">
+				Jesteśmy organizacją Revive i chcemy szerzyć wiedzę o recyklingu. 		Wierzymy, że recykling sie opłaca. Na tej stronie edukujemy szeroką liczbę 		odbiorców. Prowadzimy również warsztaty w szkołach, by dokładniej i w 		bardziej 	przystęprzy sposób p[rzybliżyć dzieciom wiedezę o recyklingu. <br>
+		Mamy wieloletnie doświadczenie , dzięki czemu możesz miec pewność, 		że 	przekazujemy rzetelną i sprawdzoną wiedzę. Możesz nam zaufać!
+			</div>	
+		</div>	
+	<div class="pudlo">
+		<div class="my"> 
+			<p>Masz jakieś pytania?
+				skontaktuj się z nami!</p>
+			<p>tel.: 12356789
+			mail: kontakt@revive.com</p>		</div>	
+	
+		<div class="my">
+			<p> Dziękujemy za bycie z nami :DMała przypominajka: recykling zaczyna się od Ciebie i od Twoich decyzji. Teraz masz już wiedzę o co w tym chodzi... czas na Twój ruch ;) </p>
+		</div>
+	</div>
+	<script>
+
+Number.prototype.pad = function(n) {
+  for (var r = this.toString(); r.length < n; r = 0 + r);
+  return r;
+};
+
+function updateClock() {
+  var now = new Date();
+  var 
+    sec = now.getSeconds(),
+    min = now.getMinutes(),
+    hou = now.getHours(),
+    mo = now.getMonth(),
+    dy = now.getDate(),
+    yr = now.getFullYear();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var tags = ["mon", "d", "y", "h", "m", "s", ],
+    corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2),]
+  for (var i = 0; i < tags.length; i++)
+    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+}
+
+function initClock() {
+  updateClock();
+  window.setInterval("updateClock()", 1);
+}
+</script>
+
+</div>
+<div class="stopka">&copy; revive </div>
+</body>
+</html>
+	

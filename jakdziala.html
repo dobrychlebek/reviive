@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta=charset="UTF-8"; content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="alemamesse.css">
+<title>revive</title>
+</head>
+<body style="background-color: #E7F5CC;">
+<div class="baner">
+
+
+<body onLoad="initClock()">
+
+  <div id="timedate">
+    <a id="mon">January</a>
+    <a id="d">1</a>,
+    <a id="y">0</a><br />
+    <a id="h">12</a> :
+    <a id="m">00</a>:
+    <a id="s">00</a>
+    
+  </div>
+
+<img src="revive.jpg" style="max-width:10%; heigh: auto; onejct-fit:contain;">
+</div>
+<div class="menulewo">
+<a href="homepage.html" >Główna<img src="home.png" style="float:left;margin-left:40px;margin-top:-30px;max-width:70px; heigh: auto;"</a>
+<a href="recykling.html">Recykling<img src="trash.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="jakdziala.html" class="aktualna">Jak działa?<img src="question.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="onas.html">O nas</a>
+</div>
+
+
+
+
+
+<div class="calosc">
+<p>	
+	<div class="tresc">
+				<h4>Wyróżnia się różne rodzaje recyklingu, których podział zależy przede wszystkim od przyjętego kryterium. W przypadku specyfiki obróbki można wydzielić recykling: </h4>
+
+			<b>- surowcowy</b> - dotyczy przetwarzania odpadów do postaci pierwotnej; <br>
+			<b>- chemiczny</b> - obejmuje przetwarzanie materiałów na produkty o innych właściwościach chemiczno-fizycznych;<br>
+			<b>- organiczny</b> - odpady podlegają obróbce beztlenowej albo tlenowej w kontrolowanych warunkach, przy wykorzystaniu mikroorganizmów. Końcowym produktem jest metal bądź materia organiczna;<br>
+			<b>- materiałowy</b> - to odzyskiwanie z odpadów tworzyw, a następnie ich powtórne przetwarzanie;<br>
+			<b>- termiczny</b> - to proces polegający na pozyskiwaniu energii z odpadów oraz ich powtórnym przetworzeniu.<br>
+		</p>
+
+				<h4>Ze względu na zastosowanie wyróżnia się następujące typy recyklingu:</h4>
+
+			<b>- ponowne zastosowanie</b> – obejmuje odpady do ponownego użycia, które po niedużej obróbce można powtórnie wykorzystać w tym samym celu, np. butelki zwrotne;<br>
+			<b>- dalsze zastosowanie</b> – odpady, których po obróbce fizycznej, chemicznej albo biologicznej można użyć w nowych produktach. Przykładem tego procesu jest granulacja tworzyw sztucznych;<br>
+			<b>- ponowne użytkowanie</b> – odpady nadające się do ponownego wprowadzenia do produkcji, czego przykładem jest regeneracja łożysk.<br>
+			
+<hr>
+		<h3>Proces recyklingu składa się z 5 etapów:</h3>
+
+		<b>- etap I</b> – segregacja, która polega na posortowaniu różnych rodzajów śmieci. Najtańsze, a przy tym najskuteczniejsze jest sortowanie odpadów w miejscu ich powstawania, tj. w gospodarstwach domowych albo w przedsiębiorstwach;<br>
+
+		<b>- etap II </b>– rozdrabnianie, które polega na poszatkowaniu w specjalnych młynach śmieci, których nie można poddać dalszej obróbce w bieżącej formie;<br>
+
+		<b>- etap III</b> – mycie materiałów szklanych i plastikowych. Zwykle odpady te są zanieczyszczone, dlatego należy je poddać kąpieli w specjalnych wannach ze środkami czyszczącymi. Po wymyciu śmieci są osuszane;<br>
+
+		<b>- etap IV</b> – wytłaczanie, czyli proces polegający na wytworzeniu finalnego produktu;<br>
+
+		<b>- etap V</b> – pozostałe czynności, takie jak zabezpieczanie lub magazynowanie towarów.
+		<br><br><br><br><br><br>
+		
+		
+		<i style="size: 60%; position: relative;">źródło: https://stojo.pl/recykling</i>
+	</div>
+	
+	<img src="liscie.png" style= "width: 20%; float: right; margin-left: 2%;">
+</div>
+<div class="many">
+<h1>Czy zastanawiałeś się kiedyś ile kilka ton recyklingu tworzy drzew?<h1>
+<p>Teraz możesz to sprawdzić!</p>
+<form>
+Ilość ton recyklingu:<input type="text" id="firstNumber" /><br>
+        <input type="button" onClick="multiplyBy()" Value="Sprawdź" /><br>
+    </form>
+ 
+    <p>Liczba drzew: <br>
+        <span id="result"></span>
+    </p>
+ 
+ 
+    <script>
+        function multiplyBy()
+        {
+          num1 = document.getElementById(
+            "firstNumber").value;
+          num2 = "17";
+          document.getElementById(
+            "result").innerHTML = num1 * num2;
+        }
+    </script>
+
+<script>
+Number.prototype.pad = function(n) {
+  for (var r = this.toString(); r.length < n; r = 0 + r);
+  return r;
+};
+
+function updateClock() {
+  var now = new Date();
+  var 
+    sec = now.getSeconds(),
+    min = now.getMinutes(),
+    hou = now.getHours(),
+    mo = now.getMonth(),
+    dy = now.getDate(),
+    yr = now.getFullYear();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var tags = ["mon", "d", "y", "h", "m", "s", ],
+    corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2),]
+  for (var i = 0; i < tags.length; i++)
+    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+}
+
+function initClock() {
+  updateClock();
+  window.setInterval("updateClock()", 1);
+}
+
+</script>
+
+
+</body>
+</html>

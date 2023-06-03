@@ -1,0 +1,309 @@
+.baner {
+	text-align: center;
+	width: 100%;
+	color: black;
+	border-top: 2px solid green;
+border-bottom: 5px solid green;
+background-color: white;
+border-radius: 0px 30px 0px 30px;
+}
+.menulewo {
+margin-right: 1%;
+width: 17%;
+	color: black;
+	text-align: center;
+float: left;
+}
+.menulewo a {
+
+	
+padding: 80px 0 3% 0;
+display: block;
+margin-top: 30px;
+border-bottom: 5px solid green;
+border-right: 5px solid green;
+font-family: 'Brush Script MT', cursive;
+font-size: 26px;
+color: black;
+cursor: pointer;
+width: auto; 
+transition: 0.1s ease;
+border-radius: 0px 30px 0px 30px;
+user-select: none;
+background-color: white;
+position: relative;
+}
+
+.menulewo a:hover {
+background-color: #ECEFE6;
+animation-name: fade;
+animation-duration: 1.5s; 
+}
+.menulewo a.aktualna {
+	background-color: #C8E0A3;
+
+}
+
+
+
+
+* {box-sizing:border-box}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+	
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 18%;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: black;
+  font-size: 29px;
+  padding: 8px 12px;
+  position: absolute;
+ position: fixed;
+  top: 40%;
+  width: 100%;
+  margin-left: 70%;
+  overflow: auto;
+  white-space: wrap;
+  text-overflow: elipsis;
+  margin-right: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+ 
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.stopka {
+	text-align: center;
+	padding: 30px;
+	width: 100%;
+	color: black;
+	border-top: 2px solid green;
+border-bottom: 5px solid green;
+background-color: white;
+font-family: 'Trebuchet MS', sans-serif;
+font-size: 20px;
+border-radius: 0px 0px 30px 30px;
+position: fixed;
+bottom: 0px;
+}
+
+
+
+.topnav {
+  background-color: white;
+  float: right;
+  border-bottom-color: 1px black;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom:1px;
+}
+
+.topnav a:hover {
+  background-color: pink;
+  color: black;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 4px;
+  border-color:black;
+  font-size: 17px;
+}
+
+.p
+{
+	font-size: 40px;
+	margin-top: 35px;
+	text-align:center;
+	font-family:Georgia;
+	font-weight:bold;
+}
+
+body {background-color:#2d2d2d;}
+
+#timedate {
+  font: small-caps lighter 150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align:left;
+  top: 0px;
+      width: 15%;
+    position: absolute;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float:left;
+  color:black;
+  padding: 20px;
+
+}
+
+.p2
+{
+	
+	font-size:150%;
+font-family:"Georgia";
+text-align:center;
+margin-left:500px;
+margin-right:250px;
+
+}
+
+.column {
+  float: left;
+  width: 41%;
+  margin-top:40px;
+  font-family:"Georgia";
+  font-size: 17px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column2 {
+  float: left;
+  width: 41%;
+  margin-top:40px;
+  font-family:"Georgia";
+  font-size: 17px;
+  margin-left:17.5%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.owo
+{
+	margin-top:20px;
+	margin-bottom:20px;
+	width:100%
+	padding:30px;
+	border: solid green;
+		padding:10px;
+		background-color:white;
+		text-align:center;
+	
+
+}
+
+.lo
+{
+	font-family: "Georgia";
+
+}
+
+.lo2
+{
+	font-family: "Georgia";
+}
+
+.jola{
+margin-bottom: 50px;
+}
+
+
+.content {
+	float: left;
+	background-color: rgb(210 225 210);
+	width: 80%;
+	position: flex;
+	}
+body {
+	margin: 5px;
+	padding: 5px;
+	}
+
+.pudlo {
+	margin: 2%;
+	padding: 2%;
+	background-color: white;
+	display: flex;
+	
+	}
+
+.my{
+	text-align: center;
+	margin: 2%;
+	padding:2%;
+	background-color: rgb(220 245 220);
+	float: left;
+	}
+	
+.tresc{
+	width: 60%;
+	position: absolute;
+	}
+	
+.calosc {
+	margin-top:30px;
+	padding: 1%;
+	float: left;
+	background-color: rgb(210 225 210);
+	width: 80%;
+	display: block;
+	position: relative;
+	border-bottom: 100px;
+	margin-bottom: 20px;
+	}
+.many {
+	position: relative;
+	display: inline-block;
+}

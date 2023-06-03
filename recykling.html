@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta=charset="UTF-8"; content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="alemamesse.css">
+<title>revive</title>
+</head>
+
+
+<script>
+
+Number.prototype.pad = function(n) {
+  for (var r = this.toString(); r.length < n; r = 0 + r);
+  return r;
+};
+
+function updateClock() {
+  var now = new Date();
+  var 
+    sec = now.getSeconds(),
+    min = now.getMinutes(),
+    hou = now.getHours(),
+    mo = now.getMonth(),
+    dy = now.getDate(),
+    yr = now.getFullYear();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var tags = ["mon", "d", "y", "h", "m", "s", ],
+    corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2),]
+  for (var i = 0; i < tags.length; i++)
+    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+}
+
+function initClock() {
+  updateClock();
+  window.setInterval("updateClock()", 1);
+}
+
+</script>
+
+<body style="background-color: #E7F5CC;">
+<div class="baner">
+
+
+<body onLoad="initClock()">
+
+  <div id="timedate">
+    <a id="mon">January</a>
+    <a id="d">1</a>,
+    <a id="y">0</a><br />
+    <a id="h">12</a> :
+    <a id="m">00</a>:
+    <a id="s">00</a>
+    
+  </div>
+
+<img src="revive.jpg" style="max-width:10%; heigh: auto; onejct-fit:contain;">
+
+
+
+</div>
+
+<div class="menulewo">
+<a href="homepage.html" >Główna<img src="home.png" style="float:left;margin-left:40px;margin-top:-30px;max-width:70px; heigh: auto;"</a>
+<a href="recykling.html" class="aktualna">Recykling<img src="trash.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="jakdziala.html">Jak działa?<img src="question.png" style="float:left;margin-left:40px;margin-top:-30px;width:65px;"</a>
+<a href="onas.html">O nas</a>
+</div>
+<div class="topnav">
+  <input type="text" placeholder="Search..">
+</div> 
+
+<div class = "recyklingnapis">
+
+<div class="p">Znaczenie recyklingu </p>
+</div>
+
+<div class="p2">
+W morzach znajduje się już 150 mln ton plastiku – czasem łatwiej trafić tam na butelkę niż na ławicę
+ryb. Na wodzie poza planktonem unosi się też mikroplastik. Pochłaniają go ryby, które później trafiają
+na nasze stoły. Osadza się on też w glebach. Nie sądzisz, że już czas na zmiany? </p2>
+    
+</div>
+
+<div class="row">
+  <div class="column"> 
+ </br> </br></br><b>Najprostsza definicja recyklingu określa go jako ponowne wykorzystanie surowców i materiałów, a </br>
+więc ich powrót do ponownego obiegu.</b>
+</br>
+Do przedmiotów, które podlegają recyklingowi, zaliczają się:
+<ul>
+  <li>papierowe gazety, opakowania oraz papier biurowy,</li>
+  <li>wyroby z tworzyw sztucznych: butelki PET, opakowania, pojemniki itp.,</li>
+  <li>szklane słoiki, butelki, szkło opakowaniowe,</li>
+  <li>opakowania produkowane z różnych tworzyw (tzw. wielomateriałowe),</li>
+  <li>worki i torby foliowe, folie opakowaniowe,</li>
+  <li>odpady biodegradowalne: liście, skoszone trawy,</li>
+  <li>aluminiowe puszki, przewody, chłodnice,</li>
+  <li>opakowania kartonowe.</li>
+ 
+</ul>
+  
+  
+  
+  </div>
+  <div class="column">
+  
+  <img src="recyk.jpg" style="max-width:100%; heigh: auto;">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+</div>
+
+<div class="row">
+  <div class="column2"> 
+ </br><b>Wiedza o tym, czy dany materiał podlega recyklingowi, czy też nie może zostać ponownie
+przetworzony,</br> znacznie ułatwia podejmowanie decyzji dotyczących tego, czy należy wrzucić go do
+pojemnika na odpady </br> segregowane, czy na zmieszane.</b>
+</br>
+Do przedmiotów, które podlegają recyklingowi, zaliczają się:
+<ul>
+  <li>artykuły i akcesoria do codziennej higieny,</li>
+  <li>zużyty sprzęt AGD, RTV, elektronika,</li>
+  <li>szkło ceramiczne oraz żaroodporne,</li>
+  <li>brudny papier, kalka lub tapeta,</li>
+  <li>styropianowe lub plastikowe opakowania po jedzeniu,</li>
+  <li>termometry, strzykawki i inne artykuły medyczne,</li>
+  <li>wyroby z ceramiki, szklane lustra,</li>
+  <li>papierowe kubeczki po napojach,</li>
+    <li>papierowe kubeczki po napojach,</li>
+	<li>znicze lub wkłady z pozostałością wosku.
+ 
+</ul>
+  
+  
+  
+  </div>
+  <div class="column">
+  
+  <img src="ble.jpg" style="max-width:100%; heigh: auto; width: auto/9;text-align:center;">
+  </div>
+</div>
+
+
+<div class="owo">
+
+<lo><b>Produkty które powstają dzięki recyklingowi:</b></lo>
+
+
+
+</div>
+
+
+<div class= "jola">
+
+<lo2>Równie bogata jest gama wyrobów, które trafiają na rynek po przetworzeniu tworzyw
+sztucznych takich jak PET oraz HDPE. Mowa tu m.in. o:</lo2>
+
+</br>
+<div class= "jola">
+<ul>
+
+
+<li>foliach, opakowaniach i butelkach,</li>
+<li>długopisach, zabawkach,</li>
+<li>obuwiu oraz tkaninach syntetycznych,</li>
+<li>materiałach termoizolacyjnych, opałowych,</li>
+<li>profilach PVC, meblach ogrodowych,</li>
+<li>artykułach sportowych, wykończeniach samochodowych oraz wielu innych
+produktach</li>
+
+</ul>
+
+
+
+
+</div>
+    
+<div class="stopka">&copy; revive </div>
+
+
+
+
+
+</body>
+
+</html>
+
