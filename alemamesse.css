@@ -134,37 +134,6 @@ bottom: 0px;
 }
 
 
-
-.topnav {
-  background-color: white;
-  float: right;
-  border-bottom-color: 1px black;
-
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
-  font-size: 15px;
-  border-bottom:1px;
-}
-
-.topnav a:hover {
-  background-color: pink;
-  color: black;
-}
-
-.topnav input[type=text] {
-  float: right;
-  padding: 4px;
-  border-color:black;
-  font-size: 17px;
-}
-
 .p
 {
 	font-size: 40px;
@@ -306,4 +275,5 @@ body {
 .many {
 	position: relative;
 	display: inline-block;
+	margin-bottom: 70px;
 }
